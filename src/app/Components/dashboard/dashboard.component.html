@@ -1,56 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Static Sidebar</title>
-    <style>
-        /* Style for the sidebar */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .sidebar {
-            height: 100vh;
-            width: 250px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            padding-top: 20px;
-            color: white;
-        }
-        .sidebar a {
-            display: block;
-            padding: 15px;
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-        }
-        .sidebar a:hover {
-            background-color: #575757;
-        }
-        .content {
-            margin-left: 250px;
-            padding: 20px;
-        }
-    </style>
+    <title>Sidebar without Curves</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <!-- Sidebar -->
     <div class="sidebar">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
+        <a href="#" class="icon-link">
+            <i class="fas fa-home"></i>
+        </a>
+        <a href="#" class="icon-link">
+            <i class="fas fa-user"></i>
+        </a>
+        <a href="#" class="icon-link">
+            <i class="fas fa-cog"></i>
+        </a>
+        <a href="#" class="icon-link">
+            <i class="fas fa-envelope"></i>
+        </a>
     </div>
 
-    <!-- Main content -->
-    <div class="content">
-        <h1>Welcome to the Website</h1>
-        <p>This is a simple page with a static side navigation bar.</p>
+    <div class="main-content ">
+        <!-- Row 1: No columns -->
+        <div class="row row-1">
+            <h1>Welcome to the Main Page</h1>
+        </div>
+    
+        <!-- Row 2: One column -->
+        <div class="row row-2">
+            <div class="column column1">
+                <div class="form-container">
+                    <form action="#" method="post">
+                        <!-- Category and Amount in the same row -->
+                        <div class="form-group row">
+                            <div class="input-group">
+                                <label for="category">Category</label>
+                                <select id="category" name="category" required>
+                                    <option value="">Select a Category</option>
+                                    <option value="category1">Category 1</option>
+                                    <option value="category2">Category 2</option>
+                                    <option value="category3">Category 3</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="amount">Amount</label>
+                                <input type="number" id="amount" name="amount" required />
+                            </div>
+                        </div>
+                
+                        <!-- Description and Date in the same row -->
+                        <div class="form-group row">
+                            <div class="input-group">
+                                <label for="description">Description</label>
+                                <textarea id="description" name="description" rows="4" required></textarea>
+                            </div>
+                            <div class="input-group">
+                                <label for="datetime">Date and Time</label>
+                                <input type="datetime-local" id="datetime" name="datetime" required />
+                            </div>
+                        </div>
+                
+                        <div class="form-group">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+            <div class="column">
+                <p>Column 2 Content</p>
+            </div>
+        </div>
+        <!-- Row 3: Two columns -->
+        <div class="row row-3">
+            <div class="column">
+                <p>Column 1 Content</p>
+            </div>
+            <div class="column">
+                <p>Column 2 Content</p>
+            </div>
+        </div>
     </div>
-
 </body>
 </html>
