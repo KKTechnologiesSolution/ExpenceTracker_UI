@@ -4,11 +4,10 @@ import { NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-registration',
-  standalone: true,
-  imports: [NgClass],
-  templateUrl: './registration.component.html',
-  styleUrl: './registration.component.css'
+    selector: 'app-registration',
+    imports: [NgClass],
+    templateUrl: './registration.component.html',
+    styleUrl: './registration.component.css'
 })
 export class RegistrationComponent {
   constructor(private router: Router) {}

@@ -1,0 +1,56 @@
+/* General Styles */
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    gap: 1rem; /* Spacing between cards */
+    justify-content: space-between; /* Align cards evenly */
+}
+
+/* Card Styling */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    min-height: 80px; /* Consistent card height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Inner padding for text spacing */
+    border-radius: 20px;
+    width: 5cm;
+    border-left: 5px solid transparent; /* Default border */
+}
+/* Specific Card Border Colors */
+.card-info {
+    border-left-color: #0dcaf0; /* Info color */
+}
+
+.card-danger {
+    border-left-color: #fd3550; /* Danger color */
+}
+
+.card-success {
+    border-left-color: #15ca20; /* Success color */
+}
+
+.card-warning {
+    border-left-color: #ffc107; /* Warning color */
+}
+/* Card Body Text */
+.card-body p {
+    font-size: 14px; /* Smaller subtitle text */
+    margin-bottom: 5px;
+}
+
+.card-body h4 {
+    font-size: 20px; /* Adjust the size for uniformity */
+    font-weight: bold;
+    margin: 0; /* Remove margin for better alignment */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .col-md-3 {
+        flex: 1 1 100%; /* Stack cards on smaller screens */
+        max-width: 100%; /* Full-width cards */
+    }
+}
