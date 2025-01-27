@@ -7,4 +7,32 @@
     overflow: hidden; /* Optional, prevents overflow */
      /* Optional background color for the container */
   }
-  
+  /* For medium-sized screens (tablets, smaller desktops) */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%; /* Reduce width to 90% of the screen */
+        height: auto; /* Allow dynamic height */
+        padding: 15px; /* Adjust padding */
+    }
+}
+
+/* For small screens (mobile devices) */
+@media (max-width: 768px) {
+    .container {
+        width: 100%; /* Take full width */
+        height: auto; /* Allow dynamic height */
+        padding: 10px; /* Adjust padding for smaller screens */
+        border-radius: 5px; /* Slightly smaller rounded corners */
+    }
+}
+
+/* For extra small screens (very small mobile devices) */
+@media (max-width: 480px) {
+    .container {
+        width: 100%; /* Full width */
+        height: auto; /* Dynamic height */
+        padding: 8px; /* Minimal padding */
+        border-radius: 3px; /* Smaller rounded corners */
+        box-shadow: none; /* Remove shadow for simplicity */
+    }
+}

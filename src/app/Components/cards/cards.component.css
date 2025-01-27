@@ -16,9 +16,10 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px; /* Inner padding for text spacing */
     border-radius: 20px;
-    width: 5cm;
+    width: 7cm;
     border-left: 5px solid transparent; /* Default border */
 }
+
 /* Specific Card Border Colors */
 .card-info {
     border-left-color: #0dcaf0; /* Info color */
@@ -35,6 +36,7 @@
 .card-warning {
     border-left-color: #ffc107; /* Warning color */
 }
+
 /* Card Body Text */
 .card-body p {
     font-size: 14px; /* Smaller subtitle text */
@@ -47,6 +49,85 @@
     margin: 0; /* Remove margin for better alignment */
 }
 
+/* Quick Action Buttons Layout */
+.card-body .row {
+    display: flex;
+    justify-content: space-between; /* Ensure the buttons are spaced evenly */
+    gap: 10px; /* Optional: add some space between the buttons */
+}
+
+.card-body .col-6 {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+}
+/* Quick Action Buttons Layout */
+.card-body .d-flex {
+    display: flex;
+    justify-content: space-between; /* Space between buttons */
+    gap: 10px; /* Optional: spacing between buttons */
+}
+
+.card-body button {
+    flex: 1; /* Buttons will have equal width */
+    padding: 10px 20px; /* Adjust padding for better size */
+    text-align: center;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #0dcaf0; /* Primary button color */
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0bb5da; /* Darker shade on hover */
+}
+/* General Card Styling */
+.quick-actions-card {
+  /* Soft gradient background */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for a modern look */
+    border: 1px solid #e0e0e0; /* Light border */
+    border-radius: 20px; /* Rounded corners */
+    padding: 7px; /* Inner spacing */
+    width: 8cm;
+    /*transition: transform 0.3s ease, box-shadow 0.3s ease;  Smooth hover effects */
+}
+
+/* Button Group */
+.quick-actions-card .button-group {
+    display: flex;
+    justify-content: space-around; /* Space out buttons evenly */
+    gap: 15px; /* Spacing between buttons */
+    margin-top: 10px;
+}
+
+/* Button Styling */
+.quick-actions-card .btn-action {
+    flex: 1; /* Equal button width */
+    font-size: 14px;
+    padding: 10px 15px; /* Button size */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded pill shape */
+    transition: background 0.3s ease, transform 0.2s ease; /* Hover effects */
+    cursor: pointer;
+}
+
+.quick-actions-card .btn-action:hover {
+    background: #0bb5da; /* Slightly darker on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .quick-actions-card .button-group {
+        flex-direction: column; /* Stack buttons on small screens */
+        gap: 10px; /* Reduce spacing for smaller layout */
+    }
+}
+
 /* Responsiveness */
 @media (max-width: 768px) {
     .col-md-3 {
@@ -54,3 +135,4 @@
         max-width: 100%; /* Full-width cards */
     }
 }
+

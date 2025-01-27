@@ -1,0 +1,76 @@
+.container {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  max-width: 100%;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-wrap: wrap; /* Allows multiple rows */
+  gap: 10px; /* Space between elements */
+}
+
+.container input,
+.container select,
+.container .dropdown {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1; /* Responsive inputs */
+}
+
+.additional-row {
+  display: flex;
+  width: 100%; /* Full row width */
+  gap: 10px; /* Space between dropdowns and radio button */
+  align-items: center;
+}
+
+.additional-row .dropdown {
+  flex: 1; /* Equal width for dropdowns */
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.container button {
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap; /* Prevents button text from wrapping */
+}
+
+.save-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.report-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #0056b3;
+}
+
+.report-btn:hover {
+  background-color: #218838;
+}
+
+.tablecontoiner {
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  padding: 10px; /* Reduced padding to allow the table to fit properly */
+  width: 100%; /* Make container take full width */
+  height: 530px; /* Set a fixed height or use dynamic height */
+  overflow: hidden; /* Optional, prevents overflow */
+}

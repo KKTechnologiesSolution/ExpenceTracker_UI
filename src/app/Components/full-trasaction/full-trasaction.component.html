@@ -1,0 +1,55 @@
+<p>All Transaction Records</p>
+
+<div class="container">
+  <!-- First Row -->
+  <input type="number" placeholder="Amount" />
+  <input type="date" placeholder="Date" />
+  <select class="selectpicker" data-live-search="true" title="Select a category">
+    <option value="" disabled selected>Choose Category</option>
+    <option value="travel">Travel</option>
+    <option value="food">Food</option>
+    <option value="rent">Rent</option>
+    <option value="shopping">Shopping</option>
+    <option value="utilities">Utilities</option>
+    <option value="entertainment">Entertainment</option>
+    <option value="health">Health</option>
+    <option value="education">Education</option>
+    <option value="add-something">Add Something</option>
+  </select>
+  <select class="dropdown" title="Loans">
+    <option value="" disabled selected>Choose Loans</option>
+    <option value="personal-loan">Personal Loan</option>
+    <option value="home-loan">Home Loan</option>
+    <option value="car-loan">Car Loan</option>
+    <option value="education-loan">Education Loan</option>
+  </select>
+  <select class="dropdown" title="Goals">
+    <option value="" disabled selected>Choose Goals</option>
+    <option value="vacation">Vacation</option>
+    <option value="retirement">Retirement</option>
+    <option value="emergency-fund">Emergency Fund</option>
+    <option value="home-renovation">Home Renovation</option>
+  </select>
+  <label class="radio-group">
+    <input type="radio" name="savings-plan" value="yes" />
+    Add in Savings Plan
+  </label>
+
+  <button class="save-btn">Save</button>
+  <button class="report-btn">Download Report</button>
+
+  <!-- Second Row -->
+  <div class="additional-row">
+    <input type="text" placeholder="Description" />
+  </div>
+</div>
+
+<div class="tablecontoiner">
+  <ag-grid-angular
+    title="latesttransaction"
+    style="width: 100%; height: 530px;"
+    [rowData]="rowData"
+    [columnDefs]="colDefs"
+    [defaultColDef]="defaultColDef">
+  </ag-grid-angular>
+</div>

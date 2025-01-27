@@ -24,7 +24,8 @@ export class LoginComponent {
     console.log('IsLoginEnable:', this.IsLoginEnable);
   }
   SignUp(): void{
-    this.router.navigate(['/dashboard']); 
+    console.log('Login Button Clicked:');
+    this.router.navigate(['/main-layout/dashboard']); 
   }
 }
 

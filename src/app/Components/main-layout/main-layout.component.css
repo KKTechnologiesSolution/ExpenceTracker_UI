@@ -1,0 +1,85 @@
+/* Sidebar */
+.sidebar {
+    height: 80vh;
+    width: 90px;
+    background-color:black; /* Same color as body */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* ETR Circle */
+.logo {
+    width: 50px; /* Size of the circle */
+    height: 50px; /* Size of the circle */
+    background-color: #ecf0f1; /* Circle background color */
+    color:black; /* Text color */
+    font-size: 20px; /* Text size */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Makes it round */
+    margin-bottom: 60px; /* Increased space between logo and first icon */
+}
+
+/* Icon links */
+.icon-link {
+    position: relative;
+    color: #ecf0f1; /* Default icon color */
+    text-decoration: none;
+    padding: 15px 0; /* Add padding for clickable area */
+    transition: all 0.3s ease; /* Smooth transition for color and scale */
+    font-size: 24px; /* Icon size */
+    margin-bottom: 40px; /* Increased space between icons */
+}
+
+/* Hover Effect for Icons */
+.icon-link:hover {
+    color: #fff; /* Icon color change on hover */
+    transform: scale(1.2); /* Slightly enlarge the icon */
+}
+
+/* Rotate Position for Sign Out Icon */
+.icon-link.signout {
+    transform-origin: center center; /* Set the origin of rotation */
+    transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
+
+.icon-link.signout:hover {
+    transform: rotate(180deg); /* Rotate the icon around its center */
+}
+
+/* Tooltip Styles */
+.icon-link::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333; /* Tooltip background color */
+    color: #fff; /* Tooltip text color */
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease-in-out;
+    transform: translateX(-50%) translateY(10px); /* Position the tooltip below */
+}
+
+/* Main Content Area */
+.main-content {
+    margin-left: 100px; /* Adjust for the sidebar width */
+    padding: 20px;
+    background-color: #f4f4f4; /* Background color for contrast */
+    min-height: 100vh;
+    border-radius: 30px; /* Curved corners for the main content */
+    box-shadow: 0 4px 10px #6A1E55; /* Soft shadow for a floating effect */
+}

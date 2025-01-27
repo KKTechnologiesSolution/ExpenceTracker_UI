@@ -1,6 +1,16 @@
 <div class="contoiner">
-  <p >Income/Expense-Chart Analysis</p>
+  <p >Category-wise Spend Analysis</p>
 <hr>
+<div id="chart">
+  <apx-chart
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [labels]="chartOptions.labels"
+    [responsive]="chartOptions.responsive"
+  ></apx-chart>
+</div>
+
+
 </div>
 
 

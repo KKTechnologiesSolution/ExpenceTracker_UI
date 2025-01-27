@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  height: 100vh; /* Full height view */
+}
+
+.left-side {
+  flex: 1; /* Take up half the width */
+  border-right: 1px solid #ddd; /* Optional: To differentiate sections */
+  padding: 16px;
+}
+
+.right-side {
+  flex: 1; /* Take up half the width */
+  padding: 16px;
+}

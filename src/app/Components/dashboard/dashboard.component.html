@@ -1,103 +1,28 @@
-<html lang="en" >
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidebar without Curves</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="sidebar">
-        <div class="logo" title="ETR">
-            ETR
-        </div>
-        <a href="#" class="icon-link" title="Dashboard">
-            <fa-icon [icon]="faDashboard"></fa-icon>
-        </a>
-        <a href="#" class="icon-link" title="Table">
-            <fa-icon [icon]="faTable"></fa-icon>
-        </a>
-        <a href="#" class="icon-link" title="Piggy Bank">
-            <fa-icon [icon]="faPiggyBank"></fa-icon>
-        </a>
-        <a href="#" class="icon-link" title="Star">
-            <fa-icon [icon]="faStar"></fa-icon>
-        </a>
-        <div class="spacer"></div> <!-- Pushes the logout icon to the bottom -->
-        <a href="#" class="icon-link signout" title="Sign Out">
-            <fa-icon [icon]="faSignOut"></fa-icon>
-        </a>
+<!-- Notification Row Section -->
+<div class="row">
+    <app-nofificationrow></app-nofificationrow>
+</div>
+<!-- Main Content Section -->
+<div class="row">
+    <!-- Card Component Section (Occupying 8/12 of the row width) -->
+    <div class="col-8">
+        <app-cards></app-cards>
     </div>
-    <div class="main-content ">
-        <!-- Row 1: No columns -->
-         <div class="row">
-          <app-nofificationrow></app-nofificationrow>
-         </div>
-        <div class="row">
-            <app-cards></app-cards>
-        </div>
-        <div class="row">
-            <div class="col-8 ">
-                <app-latesttransaction></app-latesttransaction>
-            </div>
-            <div class="col-4">
-               <app-income-expense-chart></app-income-expense-chart>
-            </div>
-        </div>
-    
-        <!-- Row 2: One column -->
-        <!-- <div class="row">
-            <div class="column column1">
-                <div class="form-container">
-                    <form action="#" method="post"> -->
-                        <!-- Category and Amount in the same row -->
-                        <!-- <div class="form-group row">
-                            <div class="input-group">
-                                <label for="category">Category</label>
-                                <select id="category" name="category" required>
-                                    <option value="">Select a Category</option>
-                                    <option value="category1">Category 1</option>
-                                    <option value="category2">Category 2</option>
-                                    <option value="category3">Category 3</option>
-                                </select>
-                            </div>
-                            <div class="input-group">
-                                <label for="amount">Amount</label>
-                                <input type="number" id="amount" name="amount" required />
-                            </div>
-                        </div>
-                 -->
-                        <!-- Description and Date in the same row -->
-                        <!-- <div class="form-group row">
-                            <div class="input-group">
-                                <label for="description">Description</label>
-                                <textarea id="description" name="description" rows="4" required></textarea>
-                            </div>
-                            <div class="input-group">
-                                <label for="datetime">Date and Time</label>
-                                <input type="datetime-local" id="datetime" name="datetime" required />
-                            </div>
-                        </div> -->
-                
-                        <!-- <div class="form-group">
-                            <button type="submit">Submit</button>
-                        </div>
-                    </form>
-                </div>
-                
-            </div>
-            <div class="column">
-     <canvas #mychart></canvas>
-            </div>
-        </div> -->
-        <!-- Row 3: Two columns -->
-        <!-- <div class="row row-3">
-            <div class="column">
-                <p>Column 1 Content</p>
-            </div>
-            <div class="column">
-                <p>Column 2 Content</p>
-            </div>
-        </div> -->
+    <div class="col-4">
+        <app-expense-flow-chart></app-expense-flow-chart>
     </div>
-</body>
-</html>
+</div>
+
+
+<!-- Transaction and Chart Section -->
+<div class="row">
+    <!-- Latest Transaction Section (Occupying 8/12 of the row width) -->
+    <div class="col-8">
+        <app-latesttransaction></app-latesttransaction>
+    </div>
+
+    <!-- Income-Expense Chart Section (Occupying 4/12 of the row width) -->
+    <div class="col-4">
+        <app-income-expense-chart></app-income-expense-chart>
+    </div>
+</div>

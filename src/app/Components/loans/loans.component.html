@@ -1,0 +1,33 @@
+<div class="container">
+    <!-- Second Row - Get Loan Details -->
+    <div class="get-loan-details">
+        <input type="text" placeholder="Loan Name" />
+        <input type="number" placeholder="Loan Amount" />
+        <input type="date" placeholder="Date" />
+        <button>Save Loan</button>
+    </div>
+</div>
+
+<div class="container">
+    <table>
+      <tr *ngFor="let loanPair of groupLoans()">
+        <td *ngFor="let loan of loanPair" class="loan-card">
+          <div class="card" [style.background-color]="lightColors[loanPair.indexOf(loan) % lightColors.length]">
+            <div class="card-header">
+              <span>{{ loan.loanName }}</span>
+              <span>₹{{ loan.loanAmount }}</span>
+            </div>
+            <div class="card-body">
+              <div><strong>Settled Amount:</strong> ₹{{ loan.settledAmount }}</div>
+              <div class="progress-bar">
+                <div class="progress" [style.width]="getRemainingPercentage(loan) + '%'"></div>
+              </div>
+              <div>{{ (loan.settledAmount / loan.loanAmount) * 100 }}%</div>
+              <div><strong>Remaining Amount:</strong> ₹{{ loan.remainingAmount }}</div>
+              <div><strong>Remaining Date:</strong> {{ loan.remainingDate }}</div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>

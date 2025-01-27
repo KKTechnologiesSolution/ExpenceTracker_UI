@@ -1,0 +1,191 @@
+<div class="container">
+    <!-- First Column -->
+    <div class="column left-column">
+      <div class="row input-row">
+        <h3>Goal Details</h3>
+        <hr>
+        <div class="row-content">
+          <input type="number" id="goalAmount" placeholder="Enter Goal Amount" />
+          <input type="number" id="numDays" placeholder="Enter Number of Days" />
+          <input type="number" id="maxAmount" placeholder="Max Amount Per Day" />
+          <button>Save</button>
+        </div>
+      </div>
+  
+      <div class="row status-row">
+        <h3>Status</h3>
+        <hr>
+        <div class="row-content">
+          <div class="status">
+            <span>Goal Amount:</span>
+            <span id="goalAmountStatus">100000</span>
+          </div>
+          <div class="status">
+            <span>Saved Amount:</span>
+            <span id="remainingAmountStatus">49000</span>
+          </div>
+          <div class="status">
+            <span>Goal Amount:</span>
+            <span id="goalAmountStatus">51000</span>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row meter-row">
+        <h3>Saving Meter</h3>
+        <hr>
+        <apx-chart
+          [series]="chartOptions.series"
+          [chart]="chartOptions.chart"
+          [plotOptions]="chartOptions.plotOptions"
+          [labels]="chartOptions.labels"
+          [fill]="chartOptions.fill"
+          [stroke]="chartOptions.stroke"
+        ></apx-chart>
+      </div>
+    </div>
+  
+   <!-- Second Column -->
+<div class="column right-column">
+
+    <div *ngIf="isBooleanTrue; else showText">
+        <div class="header-container">
+            <h3>Here's Your Saving Plan</h3>
+            <button class="Exbortbtn">Export As Excel</button>
+        </div>
+        <hr>
+        <table class="custom-table">
+            <tbody>
+                <tr>
+                    <td>Day 1<br>20 Rupees</td>
+                    <td>Day 2<br>20 Rupees</td>
+                    <td>Day 3<br>20 Rupees</td>
+                    <td>Day 4<br>20 Rupees</td>
+                    <td>Day 5<br>20 Rupees</td>
+                    <td>Day 6<br>20 Rupees</td>
+                    <td>Day 7<br>20 Rupees</td>
+                    <td>Day 8<br>20 Rupees</td>
+                    <td>Day 9<br>20 Rupees</td>
+                    <td>Day 10<br>20 Rupees</td>
+                </tr>
+                <tr>
+                    <td>Day 11<br>20 Rupees</td>
+                    <td>Day 12<br>20 Rupees</td>
+                    <td>Day 13<br>20 Rupees</td>
+                    <td>Day 14<br>20 Rupees</td>
+                    <td>Day 15<br>20 Rupees</td>
+                    <td>Day 16<br>20 Rupees</td>
+                    <td>Day 17<br>20 Rupees</td>
+                    <td>Day 18<br>20 Rupees</td>
+                    <td>Day 19<br>20 Rupees</td>
+                    <td>Day 20<br>20 Rupees</td>
+                </tr>
+                <tr>
+                    <td>Day 21<br>20 Rupees</td>
+                    <td>Day 22<br>20 Rupees</td>
+                    <td>Day 23<br>20 Rupees</td>
+                    <td>Day 24<br>20 Rupees</td>
+                    <td>Day 25<br>20 Rupees</td>
+                    <td>Day 26<br>20 Rupees</td>
+                    <td>Day 27<br>20 Rupees</td>
+                    <td>Day 28<br>20 Rupees</td>
+                    <td>Day 29<br>20 Rupees</td>
+                    <td>Day 30<br>20 Rupees</td>
+                </tr>
+                <tr>
+                    <td>Day 21<br>20 Rupees</td>
+                    <td>Day 22<br>20 Rupees</td>
+                    <td>Day 23<br>20 Rupees</td>
+                    <td>Day 24<br>20 Rupees</td>
+                    <td>Day 25<br>20 Rupees</td>
+                    <td>Day 26<br>20 Rupees</td>
+                    <td>Day 27<br>20 Rupees</td>
+                    <td>Day 28<br>20 Rupees</td>
+                    <td>Day 29<br>20 Rupees</td>
+                    <td>Day 30<br>20 Rupees</td>
+                </tr>
+                <tr>
+                    <td>Day 21<br>20 Rupees</td>
+                    <td>Day 22<br>20 Rupees</td>
+                    <td>Day 23<br>20 Rupees</td>
+                    <td>Day 24<br>20 Rupees</td>
+                    <td>Day 25<br>20 Rupees</td>
+                    <td>Day 26<br>20 Rupees</td>
+                    <td>Day 27<br>20 Rupees</td>
+                    <td>Day 28<br>20 Rupees</td>
+                    <td>Day 29<br>20 Rupees</td>
+                    <td>Day 30<br>20 Rupees</td>
+                </tr>
+                <tr>
+                    <td>Day 21<br>20 Rupees</td>
+                    <td>Day 22<br>20 Rupees</td>
+                    <td>Day 23<br>20 Rupees</td>
+                    <td>Day 24<br>20 Rupees</td>
+                    <td>Day 25<br>20 Rupees</td>
+                    <td>Day 26<br>20 Rupees</td>
+                    <td>Day 27<br>20 Rupees</td>
+                    <td>Day 28<br>20 Rupees</td>
+                    <td>Day 29<br>20 Rupees</td>
+                    <td>Day 30<br>20 Rupees</td>
+                </tr>
+                <tr>
+                    <td>Day 21<br>20 Rupees</td>
+                    <td>Day 22<br>20 Rupees</td>
+                    <td>Day 23<br>20 Rupees</td>
+                    <td>Day 24<br>20 Rupees</td>
+                    <td>Day 25<br>20 Rupees</td>
+                    <td>Day 26<br>20 Rupees</td>
+                    <td>Day 27<br>20 Rupees</td>
+                    <td>Day 28<br>20 Rupees</td>
+                    <td>Day 29<br>20 Rupees</td>
+                    <td>Day 30<br>20 Rupees</td>
+                </tr>
+                <tr>
+                    <td>Day 21<br>20 Rupees</td>
+                    <td>Day 22<br>20 Rupees</td>
+                    <td>Day 23<br>20 Rupees</td>
+                    <td>Day 24<br>20 Rupees</td>
+                    <td>Day 25<br>20 Rupees</td>
+                    <td>Day 26<br>20 Rupees</td>
+                    <td>Day 27<br>20 Rupees</td>
+                    <td>Day 28<br>20 Rupees</td>
+                    <td>Day 29<br>20 Rupees</td>
+                    <td>Day 30<br>20 Rupees</td>
+                </tr>
+                <tr>
+                    <td>Day 21<br>20 Rupees</td>
+                    <td>Day 22<br>20 Rupees</td>
+                    <td>Day 23<br>20 Rupees</td>
+                    <td>Day 24<br>20 Rupees</td>
+                    <td>Day 25<br>20 Rupees</td>
+                    <td>Day 26<br>20 Rupees</td>
+                    <td>Day 27<br>20 Rupees</td>
+                    <td>Day 28<br>20 Rupees</td>
+                    <td>Day 29<br>20 Rupees</td>
+                    <td>Day 30<br>20 Rupees</td>
+                </tr>
+                <tr>
+                    <td>Day 21<br>20 Rupees</td>
+                    <td>Day 22<br>20 Rupees</td>
+                    <td>Day 23<br>20 Rupees</td>
+                    <td>Day 24<br>20 Rupees</td>
+                    <td>Day 25<br>20 Rupees</td>
+                    <td>Day 26<br>20 Rupees</td>
+                    <td>Day 27<br>20 Rupees</td>
+                    <td>Day 28<br>20 Rupees</td>
+                    <td>Day 29<br>20 Rupees</td>
+                    <td>Day 30<br>20 Rupees</td>
+                </tr>
+                <!-- Continue this pattern until you reach Day 100 -->
+            </tbody>
+        </table>
+        
+        
+        
+    </div>
+    <ng-template #showText>
+      <h3>Plan Your Saving Now</h3>
+      <img src="imagePath" alt="Save Plan Image">
+    </ng-template>
+</div>
+  

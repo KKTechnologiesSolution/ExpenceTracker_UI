@@ -1,0 +1,10 @@
+.contoiner {
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 10px; /* Reduced padding to allow the table to fit properly */
+    width: 688px; /* Make container take full width */
+    height: 236px; /* Set a fixed height or use dynamic height */
+    overflow: hidden; /* Optional, prevents overflow */
+    /* Optional background color for the container */
+  }
+  

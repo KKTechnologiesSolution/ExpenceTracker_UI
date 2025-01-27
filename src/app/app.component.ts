@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './Components/login/login.component';
+import { NgApexchartsModule } from "ng-apexcharts";
 
 @Component({
     selector: 'app-root',
     imports: [RouterOutlet, LoginComponent],
-    template: '<router-outlet></router-outlet>',
+    templateUrl: './app.component.html',
     styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'TrackExpence';
+title='';
 }

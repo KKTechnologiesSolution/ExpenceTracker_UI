@@ -1,0 +1,27 @@
+<div class="sidebar">
+    <div class="logo" title="ETR">
+        ETR
+    </div>
+    <a href="/main-layout/dashboard" class="icon-link" title="Dashboard">
+        <fa-icon [icon]="faDashboard"></fa-icon>
+    </a>
+    <a href="/main-layout/full-trasaction" class="icon-link" title="Full Transaction">
+        <fa-icon [icon]="faTable"></fa-icon>
+    </a>
+    <a href="/main-layout/saving-plan-table" class="icon-link" title="Saving Plan">
+        <fa-icon [icon]="faPiggyBank"></fa-icon>
+    </a>
+    <a href="/main-layout/goals" class="icon-link" title="Goals">
+        <fa-icon [icon]="faStar"></fa-icon>
+    </a>
+    <a href="/main-layout/loans" class="icon-link" title="Loans">
+        <fa-icon [icon]="faHandHoldingDollar"></fa-icon>
+    </a>
+    <div class="spacer"></div> <!-- Pushes the logout icon to the bottom -->
+    <a href="#" class="icon-link signout" title="Sign Out">
+        <fa-icon [icon]="faSignOut"></fa-icon>
+    </a>
+</div>
+<div class="main-content ">
+    <router-outlet></router-outlet>
+</div>
