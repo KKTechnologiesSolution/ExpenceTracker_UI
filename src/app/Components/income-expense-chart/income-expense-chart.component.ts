@@ -20,17 +20,23 @@ export type ChartOptions = {
   imports: [ChartComponent]
 })
 export class IncomeExpenseChartComponent {
+
+   // Define categories and values in a collection (array of objects)
+   categories = [
+    { label: "Food", value: 50 },
+    { label: "Travel", value: 20 },
+    { label: "Entertainment", value: 10 },
+    { label: "Health", value: 10 },
+    { label: "Insurance", value: 15 },
+    { label: "Education", value: 15 }
+  ];
   public chartOptions: ChartOptions = {
-    series: [
-      50, 20, 10, 10, 15, 15, 30, 20, 10,20
-    ],
+    series:this.categories.map(category => category.value), 
       chart: {
         width: 500,
         type: "pie"
       },
-      labels: [
-        "Food", "Travel", "Entertainment", "Health", "Insurance", "Education", "Savings", "Miscellaneous", "Rent", "Utilities",
-      ],
+      labels: this.categories.map(category => category.label), 
       responsive: [
         {
           breakpoint: 480,

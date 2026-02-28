@@ -26,7 +26,7 @@ export type ChartOptions = {
 })
 export class InputRowComponent  implements OnInit {
   public chartOptions: ChartOptions;
-  isBooleanTrue: boolean = false; // You can set this value dynamically
+  isBooleanTrue: boolean = true; // You can set this value dynamically
   imagePath: string = 'assets/images/SavePlan.png';
   constructor() {
     this.chartOptions = {

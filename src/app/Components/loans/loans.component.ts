@@ -42,6 +42,62 @@ export class LoansComponent {
       settledAmount: 100000,
       remainingAmount: 100000,
       remainingDate: '2026-05-20'
+    },
+    {
+      loanName: 'Car Loan',
+      loanAmount: 100000,
+      loanEndDate: '2025-12-12',
+      settledAmount: 30000,
+      remainingAmount: 70000,
+      remainingDate: '2025-12-12'
+    },
+    {
+      loanName: 'Car Loan',
+      loanAmount: 100000,
+      loanEndDate: '2025-12-12',
+      settledAmount: 30000,
+      remainingAmount: 70000,
+      remainingDate: '2025-12-12'
+    },
+    {
+      loanName: 'Car Loan',
+      loanAmount: 100000,
+      loanEndDate: '2025-12-12',
+      settledAmount: 30000,
+      remainingAmount: 70000,
+      remainingDate: '2025-12-12'
+    },
+    {
+      loanName: 'Car Loan',
+      loanAmount: 100000,
+      loanEndDate: '2025-12-12',
+      settledAmount: 30000,
+      remainingAmount: 70000,
+      remainingDate: '2025-12-12'
+    },
+    {
+      loanName: 'Car Loan',
+      loanAmount: 100000,
+      loanEndDate: '2025-12-12',
+      settledAmount: 30000,
+      remainingAmount: 70000,
+      remainingDate: '2025-12-12'
+    },
+    {
+      loanName: 'Car Loan',
+      loanAmount: 100000,
+      loanEndDate: '2025-12-12',
+      settledAmount: 30000,
+      remainingAmount: 70000,
+      remainingDate: '2025-12-12'
+    },
+    {
+      loanName: 'Car Loan',
+      loanAmount: 100000,
+      loanEndDate: '2025-12-12',
+      settledAmount: 30000,
+      remainingAmount: 70000,
+      remainingDate: '2025-12-12'
     }
   ];
 

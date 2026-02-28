@@ -4,15 +4,15 @@
         <div class="card card-info radius-10 border-start border-0 border-3 border-info">
             <div class="card-body">
                 <p class="mb-1 text-secondary">Total Income</p>
-                <h4 class="text-info">4805</h4>
+                <h4 class="text-info">{{TotalIncome | currency:'INR' }}</h4>
             </div>
         </div>
     </div>
     <div class="col-12 col-md-6 mb-4">
         <div class="card card-danger radius-10 border-start border-0 border-3 border-danger">
             <div class="card-body">
-                <p class="mb-1 text-secondary">Total Revenue</p>
-                <h4 class="text-danger">$84,245</h4>
+                <p class="mb-1 text-secondary">Total Expences</p>
+                <h4 class="text-danger">{{TotalExpencses | currency:'INR' }}</h4>
             </div>
         </div>
     </div>
@@ -25,16 +25,16 @@
     <div class="col-12 col-md-6 mb-4">
         <div class="card card-warning card-success radius-10 border-start border-0 border-3 border-success">
             <div class="card-body">
-                <p class="mb-1 text-secondary">Bounce Rate</p>
-                <h4 class="text-success">34.6%</h4>
+                <p class="mb-1 text-secondary">Total Transactions</p>
+                <h4 class="text-success">{{ToatalTransaction}}</h4>
             </div>
         </div>
     </div>
     <div class="col-12 col-md-6 mb-4">
         <div class="card card-success radius-10 border-start border-0 border-3 border-warning">
             <div class="card-body">
-                <p class="mb-1 text-secondary">Total Customers</p>
-                <h4 class="text-warning">8.4K</h4>
+                <p class="mb-1 text-secondary">Balance</p>
+                <h4 class="text-warning">{{Balance | currency:'INR' }}</h4>
             </div>
         </div>
     </div>

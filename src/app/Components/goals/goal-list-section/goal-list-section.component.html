@@ -1,0 +1,32 @@
+<div *ngFor="let goal of goals" class="card" [ngStyle]="{'border-left': '6px solid ' + getRandomColor()}">
+  <!-- Left section for details -->
+  <div class="card-left">
+    <div class="goal-detail">
+      <span>Goal Name</span>
+      <strong>{{ goal.name }}</strong>
+    </div>
+    <div class="goal-detail">
+      <span>Goal Amount</span>
+      <strong>{{ goal.amount }}</strong>
+    </div>
+    <div class="goal-detail">
+      <span>So Far Saved</span>
+      <strong>{{ goal.saved }}</strong>
+    </div>
+    <div class="goal-detail">
+      <span>Remaining Amount</span>
+      <strong>{{ goal.remaining }}</strong>
+    </div>
+    <div class="goal-detail">
+      <span>End Date</span>
+      <strong>{{ goal.endDate }}</strong>
+    </div>
+  </div>
+
+  <!-- Right section for progress -->
+  <div class="card-right">
+    <div class="progress-circle" [ngStyle]="{'background': 'conic-gradient(' + getRandomColor() + ' ' + goal.progress + '%, #e0e0e0 ' + goal.progress + '%)'}">
+      <div class="percentage">{{ goal.progress }}%</div>
+    </div>
+  </div>
+</div>

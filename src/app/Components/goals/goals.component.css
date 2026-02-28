@@ -1,0 +1,37 @@
+.container-goal {
+    display: flex; /* Use flexbox to align children side by side */
+    gap: 20px; /* Optional: Add space between the containers */
+  }
+  
+  .containerLeft, .containerRight {
+    display: flex;
+    flex-direction: column; /* Ensure child elements are stacked vertically inside each container */
+    justify-content: space-between;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 10px; /* Padding to allow some spacing */
+    height: 470px; /* Set a fixed height or use dynamic height */
+    overflow: auto; /* Allow scrolling if content exceeds container */
+    background-color: #f9f9f9; /* Optional background color */
+  }
+  
+  .containerLeft {
+    width: 25%; /* Set left container width to 68% */
+  }
+  
+  .containerRight {
+    width: 80%; /* Set right container width to 30% */
+  }
+  
+  .column {
+    padding: 10px; /* Adds some spacing */
+  }
+  
+  .column-left {
+    flex: 1; /* Takes less space */
+  }
+  
+  .column-right {
+    flex: 2; /* Takes more space */
+  }
+  
